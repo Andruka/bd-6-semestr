@@ -1,0 +1,133 @@
+cd Загрузки
+
+cd mongodb-linux-x86_64-ubuntu1604-3.4.8/
+
+cd bin
+
+sudo ./mongod
+
+// открываем новый терминал, не закрывая предыдущий
+
+cd Загрузки
+
+cd mongodb-linux-x86_64-ubuntu1604-3.4.8/
+
+cd bin
+
+./mongo
+
+// работаем в монго
+
+____________________________________________________________________________________________________________________________________
+show dbs  - просмотр имеющихся баз данных
+use valutdb - создание базы данных
+show collections  - просмотр имеющихся коллекций в базе данных
+db.usdrub.find();  - вывод коллекции usd/rub
+db.eurrub.find();  - вывод коллекции eur/rub
+
+____________________________________________________________________________________________________________________________________
+
+/////////////////////////////////////////////////////////////
+//////////////*****коллекция_____usd/rub*****////////////////
+/////////////////////////////////////////////////////////////
+
+
+db.usdrub.insert({date:"2018-03-07",course: 56.5041});
+db.usdrub.insert({date:"2018-03-08",course: 56.8011});
+db.usdrub.insert({date:"2018-03-06",course: 57.1000});
+db.usdrub.insert({date:"2018-03-03",course: 56.6616});
+db.usdrub.insert({date:"2018-03-02",course: 56.4334});
+db.usdrub.insert({date:"2018-03-01",course: 56.3742});
+db.usdrub.insert({date:"2018-02-28",course: 55.6717});
+db.usdrub.insert({date:"2018-02-27",course: 55.9208});
+db.usdrub.insert({date:"2018-02-23",course: 56.7608});
+db.usdrub.insert({date:"2018-02-22",course: 56.6537});
+db.usdrub.insert({date:"2018-02-21",course: 56.5201});
+db.usdrub.insert({date:"2018-02-20",course: 56.3438});
+db.usdrub.insert({date:"2018-02-17",course: 56.3554});
+db.usdrub.insert({date:"2018-02-16",course: 56.5918});
+db.usdrub.insert({date:"2018-02-15",course: 57.5899});
+db.usdrub.insert({date:"2018-02-14",course: 57.7701});
+db.usdrub.insert({date:"2018-02-13",course: 58.0171});
+db.usdrub.insert({date:"2018-02-10",course: 58.1718});
+db.usdrub.insert({date:"2018-02-09",course: 57.6736});
+db.usdrub.insert({date:"2018-02-08",course: 56.9533});
+db.usdrub.insert({date:"2018-02-07",course: 57.2196});
+db.usdrub.insert({date:"2018-02-06",course: 56.6278});
+db.usdrub.insert({date:"2018-02-03",course: 56.0408});
+db.usdrub.insert({date:"2018-02-02",course: 56.2613});
+db.usdrub.insert({date:"2018-02-01",course: 56.1840});
+db.usdrub.insert({date:"2018-01-31",course: 56.2914});
+db.usdrub.insert({date:"2018-01-30",course: 56.2908});
+db.usdrub.insert({date:"2018-01-27",course: 55.8288});
+db.usdrub.insert({date:"2018-01-26",course: 55.9288});
+db.usdrub.insert({date:"2018-01-25",course: 56.3888});
+db.usdrub.insert({date:"2018-01-24",course: 56.4115});
+db.usdrub.insert({date:"2018-01-23",course: 56.6261});
+db.usdrub.insert({date:"2018-01-20",course: 56.5892});
+db.usdrub.insert({date:"2018-01-19",course: 56.7597});
+db.usdrub.insert({date:"2018-01-18",course: 56.5925});
+db.usdrub.insert({date:"2018-01-17",course: 56.3878});
+
+
+////////////////////////////////////////////////////////////
+//////////////*****коллекция_____usd/rub*****////////////////
+//////////////////////////////////////////////////////////////
+
+____________________________________________________________________________________________________________________________
+
+////////////////////////////////////////////////////////////
+//////////////*****коллекция_____eur/rub*****////////////////
+//////////////////////////////////////////////////////////////
+
+
+db.eurrub.insert({date:"2018-03-08",course: 70.5299});
+db.eurrub.insert({date:"2018-03-07",course: 69.7317});
+db.eurrub.insert({date:"2018-03-06",course: 70.1702});
+db.eurrub.insert({date:"2018-03-03",course: 69.4671});
+db.eurrub.insert({date:"2018-03-02",course: 68.8826});
+db.eurrub.insert({date:"2018-03-01",course: 68.9062});
+db.eurrub.insert({date:"2018-02-28",course: 68.6599});
+db.eurrub.insert({date:"2018-02-27",course: 68.9224});
+db.eurrub.insert({date:"2018-02-23",course: 69.6341});
+db.eurrub.insert({date:"2018-02-22",course: 69.8087});
+db.eurrub.insert({date:"2018-02-21",course: 69.8928});
+db.eurrub.insert({date:"2018-02-20",course: 69.9001});
+db.eurrub.insert({date:"2018-02-17",course: 70.6471});
+db.eurrub.insert({date:"2018-02-16",course: 70.6718});
+db.eurrub.insert({date:"2018-02-15",course: 71.2329});
+db.eurrub.insert({date:"2018-02-14",course: 71.1670});
+db.eurrub.insert({date:"2018-02-13",course: 71.2450});
+db.eurrub.insert({date:"2018-02-10",course: 71.3943});
+db.eurrub.insert({date:"2018-02-09",course: 70.7713});
+db.eurrub.insert({date:"2018-02-08",course: 70.5310});
+db.eurrub.insert({date:"2018-02-07",course: 70.9294});
+db.eurrub.insert({date:"2018-02-06",course: 70.4959});
+db.eurrub.insert({date:"2018-02-03",course: 70.0958});
+db.eurrub.insert({date:"2018-02-02",course: 69.7921});
+db.eurrub.insert({date:"2018-02-01",course: 69.9322});
+db.eurrub.insert({date:"2018-01-31",course: 69.5424});
+db.eurrub.insert({date:"2018-01-30",course: 69.8513});
+db.eurrub.insert({date:"2018-01-27",course: 69.6073});
+db.eurrub.insert({date:"2018-01-26",course: 69.4580});
+db.eurrub.insert({date:"2018-01-25",course: 69.4484});
+db.eurrub.insert({date:"2018-01-24",course: 69.0702});
+db.eurrub.insert({date:"2018-01-23",course: 69.2650});
+db.eurrub.insert({date:"2018-01-20",course: 69.3953});
+db.eurrub.insert({date:"2018-01-19",course: 69.2582});
+db.eurrub.insert({date:"2018-01-18",course: 69.1730});
+db.eurrub.insert({date:"2018-01-17",course: 69.0243});
+db.eurrub.insert({date:"2018-01-16",course: 68.8174});
+db.eurrub.insert({date:"2018-01-13",course: 68.2562});
+
+////////////////////////////////////////////////////////////
+//////////////*****коллекция_____eur/rub*****////////////////
+//////////////////////////////////////////////////////////////
+___________________________________________________________________________________________________________________________________
+
+///////////////////////// монго-запросы/////////////////////////
+
+
+db.usdrub.update({}, {$set: {"name": "USD/RUB"}}, {multi: 1});  // обновление + имя каждой строки
+db.eurrub.update({}, {$set: {"name": "USD/RUB"}}, {multi: 1}); 
+

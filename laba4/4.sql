@@ -1,0 +1,18 @@
+drop user kuzminov;
+drop user bugakov;
+drop user lifanov;
+drop user kirillov;
+drop user korotkov;
+drop user kruglova;
+drop user kalinina;
+drop user baturina;
+drop user lipatova;
+drop database school;
+drop group pupils;
+drop group teathers;
+drop user admin;
+--drop function pupil_mark();
+--drop function pupil_homework();
+--drop function teather_mark();
+--drop function teather_homework();
+--drop function teather_show_class(cl varchar);

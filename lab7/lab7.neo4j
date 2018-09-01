@@ -1,0 +1,421 @@
+//Студенты
+CREATE  (Kuzminov:Student {lastname: 'Kuzminov', firstname: 'Andrei', gender: 'male'}),
+        (Dogin:Student {lastname: 'Dogin', firstname: 'Dmitriy', gender: 'male'}),
+        (Dolgov:Student {lastname: 'Dolgov', firstname: 'Gregory', gender: 'male'}),
+        (Rodin:Student {lastname: 'Rodin', firstname: 'Alexey', gender: 'male'}),
+        (Vasiliev:Student {lastname: 'Vasiliev', firstname: 'Sergei', gender: 'male'}),
+        (Semerikov:Student {lastname: 'Semerikov', firstname: 'Ilya', gender: 'male'}),
+        (Bistrova:Student {lastname: 'Bistrova', firstname: 'Anastasia', gender: 'female'}),
+        (Guseva:Student {lastname: 'Guseva', firstname: 'Ekaterina', gender: 'female'})
+
+
+CREATE  (Zhigalov:Student {lastname: 'Zhigalov', firstname: 'Oleg', gender: 'male'}),
+        (Berdnik:Student {lastname: 'Berdnik', firstname: 'Evgeniy', gender: 'male'}),
+        (Efremov:Student {lastname: 'Efremov', firstname: 'Evgeniy', gender: 'male'}),
+        (Morova:Student {lastname: 'Morova', firstname: 'Ekaterina', gender: 'female'}),
+        (Usova:Student {lastname: 'Usova', firstname: 'Ekaterina', gender: 'female'}),
+        (Chirkova:Student {lastname: 'Chirkova', firstname: 'Daria', gender: 'female'}),
+	(Frolov:Student {lastname: 'Frolov', firstname: 'Daniil', gender: 'male'})
+
+CREATE  (Krivosheeva:Student {lastname: 'Krivosheeva', firstname: 'Viktoriya', gender: 'female'}),
+        (Petrov:Student {lastname: 'Petrov', firstname: 'Egor', gender: 'male'}),
+        (Makarov:Student {lastname: 'Makarov', firstname: 'Arkadiy', gender: 'male'}),
+        (Osipov:Student {lastname: 'Osipov', firstname: 'Anton', gender: 'male'}),
+        (Sulimov:Student {lastname: 'Sulimov', firstname: 'Grigoriy', gender: 'male'}),
+        (Burova:Student {lastname: 'Burova', firstname: 'Maria', gender: 'female'}),
+        (Durov:Student {lastname: 'Durov', firstname: 'Pavel', gender: 'male'})
+
+CREATE  (Kirkorov:Student {lastname: 'Kirkorov', firstname: 'Filipp', gender: 'male'}),
+        (Baskov:Student {lastname: 'Baskov', firstname: 'Nikolai', gender: 'male'}),
+        (Pugacheva:Student {lastname: 'Pugacheva', firstname: 'Alla', gender: 'male'}),
+        (Zverev:Student {lastname: 'Zverev', firstname: 'Sergey', gender: 'male'}),
+        (Ivanov:Student {lastname: 'Ivanov', firstname: 'Ivan', gender: 'male'}),
+        (Romanov:Student {lastname: 'Romanov', firstname: 'Roman', gender: 'male'}),
+        (Sidorova:Student {lastname: 'Sidorova', firstname: 'Anna', gender: 'female'})
+
+//Преподаватели
+CREATE  (Zubov:Teacher {lastname: 'Zubov', firstname: 'Vladimir', gender: 'male'}),
+        (Bogomolov:Teacher {lastname: 'Bogomolov', firstname: 'Aleksandr', gender: 'male'}),
+        (Baturina:Teacher {lastname: 'Baturina', firstname: 'Natalia', gender: 'male'}),
+        (Bolotova:Teacher {lastname:  'Bolotova', firstname: 'Irina', gender: 'male'}),
+        (Konovalova:Teacher {lastname: 'Konovalova', firstname: 'Evgeniya', gender: 'male'}),
+        (Solomonova:Teacher {lastname: 'Solomonova', firstname: 'Olga', gender: 'male'})
+
+//Группы
+CREATE  (IST:Group {name: 'IST'}),
+        (PM:Group {name: 'PM'}),
+        (IVT:Group {name: 'IVT'}),
+        (ITS:Group {name: 'ITS'})
+
+//Предметы
+CREATE  (Fizika:wSubject {name: 'Fizika'}),
+        (Kulturologiya:Subject {name: 'Kulturologiya'}),
+        (Filosofiya:Subject {name: 'Filosofiya'}),
+        (Matanaliz:Subject {name: 'Matanaliz'}),
+        (Matstatistika:Subject {name: 'Matstatistika'}),
+        (Istoria:Subject {name: 'Istoria'}),
+        (AlgebraGeometria:Subject {name: 'AlgebraGeometria'}),
+        (FuncAnaliz:Subject {name: 'FuncAnaliz'}),
+	(CompilationTheory:Subject {name: 'CompilationTheory'})
+
+
+//Студент-группа
+
+
+CREATE  (Kuzminov)-[:study_in]->(PM),
+        (Dogin)-[:study_in]->(PM),
+        (Dolgov)-[:study_in]->(PM),
+        (Rodin)-[:study_in]->(PM),
+        (Vasiliev)-[:study_in]->(PM),
+        (Semerikov)-[:study_in]->(PM),
+        (Bistrova)-[:study_in]->(PM),
+        (Guseva)-[:study_in]->(PM)
+
+
+CREATE  (Zhigalov)-[:study_in]->(IST),
+        (Berdnik)-[:study_in]->(IST),
+        (Efremov)-[:study_in]->(IST),
+        (Morova)-[:study_in]->(IST),
+        (Usova)-[:study_in]->(IST),
+        (Chirkova)-[:study_in]->(IST),
+	(Frolov)-[:study_in]->(IST)
+
+CREATE  (Krivosheeva)-[:study_in]->(IVT),
+        (Petrov)-[:study_in]->(IVT),
+        (Makarov)-[:study_in]->(IVT),
+        (Osipov)-[:study_in]->(IVT),
+        (Sulimov)-[:study_in]->(IVT),
+        (Burova)-[:study_in]->(IVT),
+        (Durov)-[:study_in]->(IVT)
+
+CREATE  (Kirkorov)-[:study_in]->(ITS),
+        (Baskov)-[:study_in]->(ITS),
+        (Pugacheva)-[:study_in]->(ITS),
+        (Zverev)-[:study_in]->(ITS),
+        (Ivanov)-[:study_in]->(ITS),
+        (Romanov)-[:study_in]->(ITS),
+        (Sidorova)-[:study_in]->(ITS)
+
+
+//Куратор-группа
+CREATE  (Zubov)-[:oversees]->(PM),
+        (Bogomolov)-[:oversees]->(IST),
+        (Bolotova)-[:oversees]->(IVT),
+	(Solomonova)-[:oversees]->(ITS)
+
+//Учитель-предмет
+CREATE  (Zubov)-[:teaches]->(Fizika),
+        (Bogomolov)-[:teaches]->(Kulturologiya),
+	(Bogomolov)-[:teaches]->(Filosofiya),
+        (Baturina)-[:teaches]->(Matanaliz),
+	(Baturina)-[:teaches]->(FuncAnaliz),
+        (Bolotova)-[:teaches]->(Matstatistika),
+        (Konovalova)-[:teaches]->(Istoria),
+        (Solomonova)-[:teaches]->(AlgebraGeometria),
+	(Solomonova)-[:teaches]->(CompilationTheory)
+
+
+//Студент-предмет
+CREATE  (Kuzminov)-[:quiz {mark: 4}]->(Fizika),
+        (Kuzminov)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Kuzminov)-[:quiz {mark: 3}]->(Filosofiya),
+        (Kuzminov)-[:quiz {mark: 5}]->(Matanaliz),
+        (Kuzminov)-[:quiz {mark: 3}]->(FuncAnaliz),
+        (Kuzminov)-[:quiz {mark: 4}]->(Matstatistika),
+        (Kuzminov)-[:quiz {mark: 4}]->(Istoria),
+	(Kuzminov)-[:quiz {mark: 4}]->(AlgebraGeometria),
+	(Kuzminov)-[:quiz {mark: 4}]->(CompilationTheory)
+
+CREATE  (Dogin)-[:quiz {mark: 5}]->(Fizika),
+        (Dogin)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Dogin)-[:quiz {mark: 4}]->(Filosofiya),
+        (Dogin)-[:quiz {mark: 4}]->(Matanaliz),
+        (Dogin)-[:quiz {mark: 4}]->(FuncAnaliz),
+        (Dogin)-[:quiz {mark: 4}]->(Matstatistika),
+        (Dogin)-[:quiz {mark: 4}]->(Istoria),
+	(Dogin)-[:quiz {mark: 5}]->(AlgebraGeometria),
+	(Dogin)-[:quiz {mark: 4}]->(CompilationTheory)
+
+CREATE  (Dolgov)-[:quiz {mark: 4}]->(Fizika),
+        (Dolgov)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Dolgov)-[:quiz {mark: 4}]->(Filosofiya),
+        (Dolgov)-[:quiz {mark: 3}]->(Matanaliz),
+        (Dolgov)-[:quiz {mark: 3}]->(FuncAnaliz),
+        (Dolgov)-[:quiz {mark: 3}]->(Matstatistika),
+        (Dolgov)-[:quiz {mark: 4}]->(Istoria),
+	(Dolgov)-[:quiz {mark: 4}]->(AlgebraGeometria),
+	(Dolgov)-[:quiz {mark: 5}]->(CompilationTheory)
+
+CREATE  (Rodin)-[:quiz {mark: 5}]->(Fizika),
+        (Rodin)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Rodin)-[:quiz {mark: 4}]->(Filosofiya),
+        (Rodin)-[:quiz {mark: 3}]->(Matanaliz),
+        (Rodin)-[:quiz {mark: 5}]->(FuncAnaliz),
+        (Rodin)-[:quiz {mark: 4}]->(Matstatistika),
+        (Rodin)-[:quiz {mark: 4}]->(Istoria),
+	(Rodin)-[:quiz {mark: 3}]->(AlgebraGeometria),
+	(Rodin)-[:quiz {mark: 3}]->(CompilationTheory)
+
+CREATE  (Vasiliev)-[:quiz {mark: 4}]->(Fizika),
+        (Vasiliev)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Vasiliev)-[:quiz {mark: 4}]->(Filosofiya),
+        (Vasiliev)-[:quiz {mark: 5}]->(Matanaliz),
+        (Vasiliev)-[:quiz {mark: 4}]->(FuncAnaliz),
+        (Vasiliev)-[:quiz {mark: 3}]->(Matstatistika),
+        (Vasiliev)-[:quiz {mark: 4}]->(Istoria),
+	(Vasiliev)-[:quiz {mark: 4}]->(AlgebraGeometria),
+	(Vasiliev)-[:quiz {mark: 4}]->(CompilationTheory)
+
+CREATE  (Semerikov)-[:quiz {mark: 5}]->(Fizika),
+        (Semerikov)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Semerikov)-[:quiz {mark: 3}]->(Filosofiya),
+        (Semerikov)-[:quiz {mark: 3}]->(Matanaliz),
+        (Semerikov)-[:quiz {mark: 4}]->(FuncAnaliz),
+        (Semerikov)-[:quiz {mark: 4}]->(Matstatistika),
+        (Semerikov)-[:quiz {mark: 4}]->(Istoria),
+	(Semerikov)-[:quiz {mark: 5}]->(AlgebraGeometria),
+	(Semerikov)-[:quiz {mark: 5}]->(CompilationTheory)
+
+CREATE  (Bistrova)-[:quiz {mark: 3}]->(Fizika),
+        (Bistrova)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Bistrova)-[:quiz {mark: 4}]->(Filosofiya),
+        (Bistrova)-[:quiz {mark: 3}]->(Matanaliz),
+        (Bistrova)-[:quiz {mark: 3}]->(FuncAnaliz),
+        (Bistrova)-[:quiz {mark: 4}]->(Matstatistika),
+        (Bistrova)-[:quiz {mark: 4}]->(Istoria),
+	(Bistrova)-[:quiz {mark: 4}]->(AlgebraGeometria),
+	(Bistrova)-[:quiz {mark: 4}]->(CompilationTheory)
+
+CREATE  (Guseva)-[:quiz {mark: 4}]->(Fizika),
+        (Guseva)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Guseva)-[:quiz {mark: 4}]->(Filosofiya),
+        (Guseva)-[:quiz {mark: 5}]->(Matanaliz),
+        (Guseva)-[:quiz {mark: 4}]->(FuncAnaliz),
+        (Guseva)-[:quiz {mark: 4}]->(Matstatistika),
+        (Guseva)-[:quiz {mark: 4}]->(Istoria),
+	(Guseva)-[:quiz {mark: 5}]->(AlgebraGeometria),
+	(Guseva)-[:quiz {mark: 5}]->(CompilationTheory)
+
+CREATE  (Zhigalov)-[:quiz {mark: 3}]->(Fizika),
+        (Zhigalov)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Zhigalov)-[:quiz {mark: 4}]->(Filosofiya),
+        (Zhigalov)-[:quiz {mark: 4}]->(Matanaliz),
+        (Zhigalov)-[:quiz {mark: 5}]->(FuncAnaliz),
+        (Zhigalov)-[:quiz {mark: 4}]->(Matstatistika),
+        (Zhigalov)-[:quiz {mark: 4}]->(Istoria),
+	(Zhigalov)-[:quiz {mark: 3}]->(AlgebraGeometria),
+	(Zhigalov)-[:quiz {mark: 3}]->(CompilationTheory)
+
+CREATE  (Berdnik)-[:quiz {mark: 5}]->(Fizika),
+        (Berdnik)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Berdnik)-[:quiz {mark: 4}]->(Filosofiya),
+        (Berdnik)-[:quiz {mark: 4}]->(Matanaliz),
+        (Berdnik)-[:quiz {mark: 5}]->(FuncAnaliz),
+        (Berdnik)-[:quiz {mark: 4}]->(Matstatistika),
+        (Berdnik)-[:quiz {mark: 4}]->(Istoria),
+	(Berdnik)-[:quiz {mark: 5}]->(AlgebraGeometria),
+	(Berdnik)-[:quiz {mark: 5}]->(CompilationTheory)
+
+CREATE  (Efremov)-[:quiz {mark: 4}]->(Fizika),
+        (Efremov)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Efremov)-[:quiz {mark: 4}]->(Filosofiya),
+        (Efremov)-[:quiz {mark: 4}]->(Matanaliz),
+        (Efremov)-[:quiz {mark: 4}]->(FuncAnaliz),
+        (Efremov)-[:quiz {mark: 4}]->(Matstatistika),
+        (Efremov)-[:quiz {mark: 4}]->(Istoria),
+	(Efremov)-[:quiz {mark: 4}]->(AlgebraGeometria),
+	(Efremov)-[:quiz {mark: 4}]->(CompilationTheory)
+
+CREATE  (Morova)-[:quiz {mark: 5}]->(Fizika),
+        (Morova)-[:quiz {mark: 3}]->(Kulturologiya),
+        (Morova)-[:quiz {mark: 4}]->(Filosofiya),
+        (Morova)-[:quiz {mark: 5}]->(Matanaliz),
+        (Morova)-[:quiz {mark: 5}]->(FuncAnaliz),
+        (Morova)-[:quiz {mark: 3}]->(Matstatistika),
+        (Morova)-[:quiz {mark: 4}]->(Istoria),
+	(Morova)-[:quiz {mark: 5}]->(AlgebraGeometria),
+	(Morova)-[:quiz {mark: 5}]->(CompilationTheory)
+
+CREATE  (Usova)-[:quiz {mark: 3}]->(Fizika),
+        (Usova)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Usova)-[:quiz {mark: 4}]->(Filosofiya),
+        (Usova)-[:quiz {mark: 3}]->(Matanaliz),
+        (Usova)-[:quiz {mark: 3}]->(FuncAnaliz),
+        (Usova)-[:quiz {mark: 4}]->(Matstatistika),
+        (Usova)-[:quiz {mark: 4}]->(Istoria),
+	(Usova)-[:quiz {mark: 3}]->(AlgebraGeometria),
+	(Usova)-[:quiz {mark: 3}]->(CompilationTheory)
+
+CREATE  (Chirkova)-[:quiz {mark: 4}]->(Fizika),
+        (Chirkova)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Chirkova)-[:quiz {mark: 4}]->(Filosofiya),
+        (Chirkova)-[:quiz {mark: 5}]->(Matanaliz),
+        (Chirkova)-[:quiz {mark: 5}]->(FuncAnaliz),
+        (Chirkova)-[:quiz {mark: 4}]->(Matstatistika),
+        (Chirkova)-[:quiz {mark: 4}]->(Istoria),
+	(Chirkova)-[:quiz {mark: 4}]->(AlgebraGeometria),
+	(Chirkova)-[:quiz {mark: 3}]->(CompilationTheory)
+
+CREATE  (Frolov)-[:quiz {mark: 4}]->(Fizika),
+        (Frolov)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Frolov)-[:quiz {mark: 4}]->(Filosofiya),
+        (Frolov)-[:quiz {mark: 4}]->(Matanaliz),
+        (Frolov)-[:quiz {mark: 4}]->(FuncAnaliz),
+        (Frolov)-[:quiz {mark: 4}]->(Matstatistika),
+        (Frolov)-[:quiz {mark: 4}]->(Istoria),
+	(Frolov)-[:quiz {mark: 3}]->(AlgebraGeometria),
+	(Frolov)-[:quiz {mark: 3}]->(CompilationTheory)
+
+CREATE  (Krivosheeva)-[:quiz {mark: 5}]->(Fizika),
+        (Krivosheeva)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Krivosheeva)-[:quiz {mark: 4}]->(Filosofiya),
+        (Krivosheeva)-[:quiz {mark: 4}]->(Matanaliz),
+        (Krivosheeva)-[:quiz {mark: 5}]->(FuncAnaliz),
+        (Krivosheeva)-[:quiz {mark: 4}]->(Matstatistika),
+        (Krivosheeva)-[:quiz {mark: 4}]->(Istoria),
+	(Krivosheeva)-[:quiz {mark: 4}]->(AlgebraGeometria),
+	(Krivosheeva)-[:quiz {mark: 5}]->(CompilationTheory)
+
+CREATE  (Petrov)-[:quiz {mark: 4}]->(Fizika),
+        (Petrov)-[:quiz {mark: 3}]->(Kulturologiya),
+        (Petrov)-[:quiz {mark: 4}]->(Filosofiya),
+        (Petrov)-[:quiz {mark: 3}]->(Matanaliz),
+        (Petrov)-[:quiz {mark: 4}]->(FuncAnaliz),
+        (Petrov)-[:quiz {mark: 3}]->(Matstatistika),
+        (Petrov)-[:quiz {mark: 4}]->(Istoria),
+	(Petrov)-[:quiz {mark: 5}]->(AlgebraGeometria),
+	(Petrov)-[:quiz {mark: 4}]->(CompilationTheory)
+
+CREATE  (Makarov)-[:quiz {mark: 3}]->(Fizika),
+        (Makarov)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Makarov)-[:quiz {mark: 4}]->(Filosofiya),
+        (Makarov)-[:quiz {mark: 4}]->(Matanaliz),
+        (Makarov)-[:quiz {mark: 5}]->(FuncAnaliz),
+        (Makarov)-[:quiz {mark: 4}]->(Matstatistika),
+        (Makarov)-[:quiz {mark: 4}]->(Istoria),
+	(Makarov)-[:quiz {mark: 5}]->(AlgebraGeometria),
+	(Makarov)-[:quiz {mark: 4}]->(CompilationTheory)
+
+CREATE  (Osipov)-[:quiz {mark: 4}]->(Fizika),
+        (Osipov)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Osipov)-[:quiz {mark: 4}]->(Filosofiya),
+        (Osipov)-[:quiz {mark: 5}]->(Matanaliz),
+        (Osipov)-[:quiz {mark: 4}]->(FuncAnaliz),
+        (Osipov)-[:quiz {mark: 4}]->(Matstatistika),
+        (Osipov)-[:quiz {mark: 4}]->(Istoria),
+	(Osipov)-[:quiz {mark: 5}]->(AlgebraGeometria),
+	(Osipov)-[:quiz {mark: 3}]->(CompilationTheory)
+
+CREATE  (Sulimov)-[:quiz {mark: 5}]->(Fizika),
+        (Sulimov)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Sulimov)-[:quiz {mark: 3}]->(Filosofiya),
+        (Sulimov)-[:quiz {mark: 3}]->(Matanaliz),
+        (Sulimov)-[:quiz {mark: 3}]->(FuncAnaliz),
+        (Sulimov)-[:quiz {mark: 4}]->(Matstatistika),
+        (Sulimov)-[:quiz {mark: 4}]->(Istoria),
+	(Sulimov)-[:quiz {mark: 5}]->(AlgebraGeometria),
+	(Sulimov)-[:quiz {mark: 4}]->(CompilationTheory)
+
+CREATE  (Burova)-[:quiz {mark: 4}]->(Fizika),
+        (Burova)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Burova)-[:quiz {mark: 4}]->(Filosofiya),
+        (Burova)-[:quiz {mark: 3}]->(Matanaliz),
+        (Burova)-[:quiz {mark: 4}]->(FuncAnaliz),
+        (Burova)-[:quiz {mark: 4}]->(Matstatistika),
+        (Burova)-[:quiz {mark: 4}]->(Istoria),
+	(Burova)-[:quiz {mark: 5}]->(AlgebraGeometria),
+	(Burova)-[:quiz {mark: 4}]->(CompilationTheory)
+
+CREATE  (Durov)-[:quiz {mark: 5}]->(Fizika),
+        (Durov)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Durov)-[:quiz {mark: 4}]->(Filosofiya),
+        (Durov)-[:quiz {mark: 4}]->(Matanaliz),
+        (Durov)-[:quiz {mark: 5}]->(FuncAnaliz),
+        (Durov)-[:quiz {mark: 4}]->(Matstatistika),
+        (Durov)-[:quiz {mark: 4}]->(Istoria),
+	(Durov)-[:quiz {mark: 4}]->(AlgebraGeometria),
+	(Durov)-[:quiz {mark: 3}]->(CompilationTheory)
+
+CREATE  (Kirkorov)-[:quiz {mark: 5}]->(Fizika),
+        (Kirkorov)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Kirkorov)-[:quiz {mark: 4}]->(Filosofiya),
+        (Kirkorov)-[:quiz {mark: 3}]->(Matanaliz),
+        (Kirkorov)-[:quiz {mark: 4}]->(FuncAnaliz),
+        (Kirkorov)-[:quiz {mark: 4}]->(Matstatistika),
+        (Kirkorov)-[:quiz {mark: 3}]->(Istoria),
+	(Kirkorov)-[:quiz {mark: 5}]->(AlgebraGeometria),
+	(Kirkorov)-[:quiz {mark: 4}]->(CompilationTheory)
+
+CREATE  (Baskov)-[:quiz {mark: 5}]->(Fizika),
+        (Baskov)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Baskov)-[:quiz {mark: 4}]->(Filosofiya),
+        (Baskov)-[:quiz {mark: 4}]->(Matanaliz),
+        (Baskov)-[:quiz {mark: 4}]->(FuncAnaliz),
+        (Baskov)-[:quiz {mark: 4}]->(Matstatistika),
+        (Baskov)-[:quiz {mark: 4}]->(Istoria),
+	(Baskov)-[:quiz {mark: 4}]->(AlgebraGeometria),
+	(Baskov)-[:quiz {mark: 4}]->(CompilationTheory)
+
+CREATE  (Pugacheva)-[:quiz {mark: 3}]->(Fizika),
+        (Pugacheva)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Pugacheva)-[:quiz {mark: 4}]->(Filosofiya),
+        (Pugacheva)-[:quiz {mark: 3}]->(Matanaliz),
+        (Pugacheva)-[:quiz {mark: 4}]->(FuncAnaliz),
+        (Pugacheva)-[:quiz {mark: 4}]->(Matstatistika),
+        (Pugacheva)-[:quiz {mark: 4}]->(Istoria),
+	(Pugacheva)-[:quiz {mark: 5}]->(AlgebraGeometria),
+	(Pugacheva)-[:quiz {mark: 4}]->(CompilationTheory)
+
+CREATE  (Zverev)-[:quiz {mark: 4}]->(Fizika),
+        (Zverev)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Zverev)-[:quiz {mark: 4}]->(Filosofiya),
+        (Zverev)-[:quiz {mark: 3}]->(Matanaliz),
+        (Zverev)-[:quiz {mark: 4}]->(FuncAnaliz),
+        (Zverev)-[:quiz {mark: 4}]->(Matstatistika),
+        (Zverev)-[:quiz {mark: 4}]->(Istoria),
+	(Zverev)-[:quiz {mark: 5}]->(AlgebraGeometria),
+	(Zverev)-[:quiz {mark: 3}]->(CompilationTheory)
+
+CREATE  (Ivanov)-[:quiz {mark: 5}]->(Fizika),
+        (Ivanov)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Ivanov)-[:quiz {mark: 4}]->(Filosofiya),
+        (Ivanov)-[:quiz {mark: 3}]->(Matanaliz),
+        (Ivanov)-[:quiz {mark: 4}]->(FuncAnaliz),
+        (Ivanov)-[:quiz {mark: 4}]->(Matstatistika),
+        (Ivanov)-[:quiz {mark: 4}]->(Istoria),
+	(Ivanov)-[:quiz {mark: 5}]->(AlgebraGeometria),
+	(Ivanov)-[:quiz {mark: 3}]->(CompilationTheory)
+
+CREATE  (Romanov)-[:quiz {mark: 4}]->(Fizika),
+        (Romanov)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Romanov)-[:quiz {mark: 4}]->(Filosofiya),
+        (Romanov)-[:quiz {mark: 4}]->(Matanaliz),
+        (Romanov)-[:quiz {mark: 3}]->(FuncAnaliz),
+        (Romanov)-[:quiz {mark: 4}]->(Matstatistika),
+        (Romanov)-[:quiz {mark: 4}]->(Istoria),
+	(Romanov)-[:quiz {mark: 3}]->(AlgebraGeometria),
+	(Romanov)-[:quiz {mark: 3}]->(CompilationTheory)
+
+CREATE  (Sidorova)-[:quiz {mark: 3}]->(Fizika),
+        (Sidorova)-[:quiz {mark: 4}]->(Kulturologiya),
+        (Sidorova)-[:quiz {mark: 4}]->(Filosofiya),
+        (Sidorova)-[:quiz {mark: 3}]->(Matanaliz),
+        (Sidorova)-[:quiz {mark: 5}]->(FuncAnaliz),
+        (Sidorova)-[:quiz {mark: 4}]->(Matstatistika),
+        (Sidorova)-[:quiz {mark: 3}]->(Istoria),
+	(Sidorova)-[:quiz {mark: 5}]->(AlgebraGeometria),
+	(Sidorova)-[:quiz {mark: 4}]->(CompilationTheory)
+
+//Запросы
+match (t:Teacher) return t
+
+match (student:Student) where not ((student)-[:quiz {mark: 3}]->(:Subject))  return student
+
+match (teacher:Teacher) where not (teacher)-[:oversees]->(:Group) return teacher
+
+match (teacher:Teacher{lastname:'Zubov'} )-[:teaches]->(subject)<-[:quiz {mark: 5}]-(student:Student) return  teacher,subject, student
+
+match (student:Student{gender:'female'})-[:quiz{mark: 3}]->(subject) return student
+
+
+
